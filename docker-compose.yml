@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  php-apache:
+    build:
+     context: .
+     dockerfile: php.Dockerfile
+    ports:
+      - '80:80'
+    volumes:
+      - ./html:/var/www/html/
+      - ./php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./php/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+
+  mariadb:  
+    image: mariadb
+    environment:
+      - MARIADB_DATABASE=masterphp
+      - MARIADB_ROOT_PASSWORD=admin123
+    volumes:
+      - ./mariadb:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on: 
+     - mariadb
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=mariadb
+      - MYSQL_ROOT_PASSWORD=admin123

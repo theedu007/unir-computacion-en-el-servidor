@@ -23,19 +23,19 @@
                 </div>
                 <form id="formOperador">
                     <div class="row mt-2">
-                        <div class="col-3">
+                        <div class="col-6 col-md-3">
                             <div class="form-group">
                                 <label for="num1">Ingrese el primer numero:</label>
                                 <input type="number" class="form-control" id="num1" name="num1">
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-md-3">
                             <div class="form-group">
                                 <label for="num2">Ingrese el segundo numero:</label>
                                 <input type="number" class="form-control" id="num2" name="num2">
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-md-3">
                             <div class="form-group">
                                 <label for="operador">Ingrese el operador:</label>
                                 <select name="operador" id="operador" class="form-control">
@@ -60,7 +60,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-md-3">
                             <div class="form-group">
                                 <label for="resultado">Resultado:</label>
                                 <input type="text" class="form-control" name="resultado" id="resultado" disabled>
@@ -82,13 +82,13 @@
                 </div>
                 <form id="formCadena">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-6">
                             <div class="form-group">
                                 <label for="cadena">Ingrese una cadena de texto:</label>
                                 <input type="text" class="form-control" name="cadena" id="cadena">
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6">
                             <div class="form-group">
                                 <label for="longitudResultado">La Longitud es de:</label>
                                 <input type="text" class="form-control" id="longitudResultado" disabled>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-3">
+                        <div class="col-8">
                             <div class="form-group">
                                 <button class="btn btn-primary" id="btnSubmitCadena">Obtener longitud de cadena</button>
                         </div>
@@ -109,13 +109,13 @@
                 </div>
                 <form id="girarCadena">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-6 col-sm-8">
                             <div class="form-group">
                                 <label for="cadenaGiro">Ingrese una cadena de texto:</label>
                                 <input type="text" class="form-control" name="cadenaGiro" id="cadenaGiro">
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-sm-4">
                             <div class="form-group">
                                 <label for="operadorGiro">Ingrese la estructura de control que se utilizara:</label>
                                 <select name="operadorGiro" id="operadorGiro" class="form-control">
@@ -124,7 +124,7 @@
                                         // la llave de un elemento del array sera el valor enviado al archivo girarCadena.php
                                         // el valor de un elemento del array es el texto a mostrar en las opciones del despegable
                                         $operaciones = array (
-                                            "for" => "Usanfo for", 
+                                            "for" => "Usando for", 
                                             "while" => "Usando while", 
                                             "dowhile" => "Usando do-while"
                                         );
@@ -139,7 +139,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-6 col-sm-8">
                             <div class="form-group">
                                 <label for="resultadoGiro">Resultado:</label>
                                 <input type="text" class="form-control" name="resultadoGiro" id="resultadoGiro" disabled>

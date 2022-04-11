@@ -88,6 +88,7 @@ if(isset($_POST["cadenaGiro"]) && isset($_POST["operadorGiro"])) {
         echo "Operacion no soportada";
     }
 } else {
+    //Si el parametro no viene en la llamada regresamos un mensaje de error
     echo "No se puede realizar la operacion";
 }
 
